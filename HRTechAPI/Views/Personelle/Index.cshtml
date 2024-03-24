@@ -1,0 +1,131 @@
+﻿@model IEnumerable<HRTechAPI.Entities.Personel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FotografYolu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TcNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IseGirisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IstenCikisTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Aktiflik)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Meslek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departman)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sirket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telefon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Maas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FotografYolu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ad2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Soyad2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DogumTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TcNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IseGirisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IstenCikisTarihi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aktiflik)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meslek.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Departman.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sirket.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maas)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
